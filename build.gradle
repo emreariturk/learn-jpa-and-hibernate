@@ -11,7 +11,7 @@ sourceCompatibility = '17'
 repositories {
 	mavenCentral()
 }
-
+/*
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
@@ -20,6 +20,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
+// https://mvnrepository.com/artifact/gradle.plugin.com.github.jengelman.gradle.plugins/shadow
+	runtimeOnly 'gradle.plugin.com.github.jengelman.gradle.plugins:shadow:7.0.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.data:spring-data-rest-hal-explorer'
 
@@ -30,7 +32,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
 }
-
+*/
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+apply from:'dependencies.gradle'
